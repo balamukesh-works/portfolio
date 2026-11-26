@@ -295,13 +295,11 @@ a {
 }
 
 .profile-card img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
 }
-
 
 .profile-label {
     position: absolute;
@@ -531,6 +529,308 @@ a {
 /* Mobile */
 
 @media (max-width: 760px) {
+    .portfolio-page {
+        padding: 0 16px;
+    }
+
+    .navbar {
+        min-height: 76px;
+        flex-wrap: wrap;
+        padding: 14px 0;
+    }
+
+    .brand {
+        font-size: 14px;
+    }
+
+    .connect-button {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 19px;
+        overflow-x: auto;
+        padding: 7px 0 2px;
+        font-size: 11px;
+    }
+
+    .home-section {
+        display: block;
+        min-height: 0;
+        padding: 45px 7px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+    }
+
+    .hero-role {
+        font-size: 17px;
+    }
+
+    .hero-tags {
+        gap: 8px;
+    }
+
+    .hero-tags span {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    .profile-area {
+        height: 315px;
+        margin-top: 28px;
+        transform: none;
+    }
+
+    .profile-card {
+        top: 17px;
+        width: 210px;
+        height: 264px;
+        border-width: 6px;
+    }
+
+    .ring-one {
+        top: 70px;
+        left: -80px;
+        width: 440px;
+        height: 170px;
+    }
+
+    .ring-two {
+        display: none;
+    }
+
+    .profile-label {
+        width: 132px;
+        min-height: 56px;
+        gap: 9px;
+        padding: 9px;
+    }
+
+    .profile-label i {
+        font-size: 22px;
+    }
+
+    .profile-label strong {
+        margin-bottom: 3px;
+        font-size: 11px;
+    }
+
+    .profile-label span {
+        font-size: 8px;
+    }
+
+    .label-sql {
+        top: 16px;
+        left: 0;
+    }
+
+    .label-analyst {
+        right: 0;
+        bottom: 23px;
+    }
+
+    .home-about {
+        margin-bottom: 30px;
+        padding: 44px 22px;
+    }
+
+    .about-heading {
+        margin-bottom: 30px;
+    }
+
+    .about-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-copy {
+        padding-left: 20px;
+    }
+
+    .about-copy p {
+        font-size: 13px;
+    }
+
+    .highlight-card {
+        min-height: 84px;
+        padding: 14px;
+    }
+}
+/* Square photo frame */
+.profile-card {
+    top: 42px;
+    width: 320px;
+    height: 320px;
+    border: 7px solid rgba(106, 70, 239, 0.8);
+    border-radius: 18px;
+}
+
+@media (max-width: 760px) {
+    .profile-card {
+        top: 28px;
+        width: 210px;
+        height: 210px;
+        border-width: 5px;
+        border-radius: 14px;
+    }
+}
+.profile-card {
+    width: 320px;
+    height: 320px;
+    border-radius: 18px;
+}
+
+/* =================================
+   SKILLS PAGE
+================================= */
+
+.skills-section {
+    min-height: auto;
+   padding: 15px 7% 90px;
+}
+
+.skills-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.skills-heading > p:first-child {
+    margin-bottom: 12px;
+    color: #9d82ff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.skills-heading h1 {
+    font-size: clamp(32px, 3.5vw, 48px);
+    letter-spacing: -1.5px;
+}
+
+.skills-heading h1 span {
+    color: #9b74ff;
+}
+
+.skills-intro {
+    max-width: 580px;
+    margin: 17px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Skills Grid */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Tablet Responsive - Skills */
+
+@media (max-width: 1050px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* Skill Cards */
+
+.skill-card {
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    min-height: 0;
+    padding: 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(20, 35, 72, 0.85),
+        rgba(8, 19, 42, 0.92)
+    );
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(145, 111, 255, 0.65);
+    box-shadow: 0 15px 35px rgba(75, 48, 180, 0.15);
+
+}
+
+
+
+/* Skill Icons */
+
+.skill-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 12px;
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(117, 80, 255, 0.3),
+        rgba(35, 133, 255, 0.2)
+    );
+
+    color: #a78bfa;
+    font-size: 19px;
+    place-items: center;
+}
+.skill-card h2 {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.skill-card > p {
+    margin-bottom: 13px;
+    color: #b9c4df;
+    font-size: 11px;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+}
+
+
+/* Skill Tags */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.skill-tags span {
+    padding: 6px 8px;
+    border: 1px solid rgba(112, 138, 220, 0.2);
+    border-radius: 8px;
+    background: rgba(15, 28, 59, 0.75);
+    color: #dce3ff;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* Mobile Responsive - Skills */
+
+@media (max-width: 760px) {
 
     .skills-section {
         padding: 50px 5% 60px;
@@ -542,36 +842,29 @@ a {
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
-        max-width: 100%;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        max-width: 480px;
         margin: 0 auto;
     }
 
     .skill-card {
         grid-column: auto;
         aspect-ratio: auto;
-        min-height: 260px;
-        padding: 14px;
-    }
-
-    .skill-card h2 {
-        font-size: 15px;
+        min-height: auto;
+        padding: 20px;
     }
 
     .skill-card > p {
-        font-size: 11px;
-    }
-
-    .skill-tags {
-        gap: 5px;
+        font-size: 13px;
+        line-height: 1.6;
     }
 
     .skill-tags span {
-        font-size: 9px;
-        padding: 5px 6px;
+        font-size: 10px;
     }
 }
+
 
 /* ==============================
    PROJECTS SECTION
@@ -2043,212 +2336,3 @@ body {
         letter-spacing: -1px;
     }
 }
-
-/* =================================
-   UNIFIED MOBILE RESPONSIVENESS
-================================= */
-
-@media (max-width: 760px) {
-
-    /* Navigation */
-    .navbar {
-        min-height: auto;
-        padding: 16px 10px;
-        flex-wrap: wrap;
-        row-gap: 16px;
-    }
-
-    .nav-links {
-        order: 3;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px 18px;
-        font-size: 12px;
-    }
-
-    .connect-button {
-        padding: 9px 12px;
-        font-size: 11px;
-    }
-
-    /* Home */
-    .home-section {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        padding: 55px 4% 25px;
-        gap: 25px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: clamp(38px, 10vw, 48px);
-        letter-spacing: -2px;
-    }
-
-    .hero-description {
-        text-align: left;
-        font-size: 14px;
-    }
-
-    .hero-tags {
-        justify-content: center;
-    }
-
-    /* Profile */
-    .profile-area {
-        width: 100%;
-        max-width: 420px;
-        height: 340px;
-        margin: 0 auto;
-        transform: none;
-    }
-
-    .profile-card {
-        top: 15px;
-        left: 50%;
-        width: 235px;
-        height: 285px;
-    }
-
-    .ring-one {
-        top: 65px;
-        left: 50%;
-        width: 340px;
-        height: 190px;
-        transform: translateX(-50%) rotate(-16deg);
-    }
-
-    .ring-two {
-        top: 15px;
-        left: 50%;
-        width: 290px;
-        height: 300px;
-        transform: translateX(-50%) rotate(18deg);
-    }
-
-    .label-sql {
-        top: 35px;
-        left: 0;
-        transform: scale(0.78);
-        transform-origin: left top;
-    }
-
-    .label-analyst {
-        right: 0;
-        bottom: 20px;
-        transform: scale(0.78);
-        transform-origin: right bottom;
-    }
-
-    /* About */
-    .home-about {
-        margin-top: 15px;
-        padding: 40px 6% 30px;
-        border-radius: 18px;
-    }
-
-    .about-heading {
-        margin-bottom: 28px;
-    }
-
-    .about-heading h2 {
-        font-size: 30px;
-    }
-
-    .about-layout {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .about-copy {
-        padding-left: 18px;
-    }
-
-    .about-copy h3 {
-        font-size: 22px;
-    }
-
-    .about-copy p {
-        font-size: 13px;
-    }
-
-    .about-highlights {
-        gap: 12px;
-    }
-
-    .highlight-card {
-        min-height: 85px;
-        padding: 14px;
-    }
-
-    /* Skills */
-    .skills-section {
-        padding: 50px 5% 60px;
-    }
-
-    .skills-grid {
-        grid-template-columns: minmax(0, 1fr);
-        width: 100%;
-        max-width: 440px;
-        gap: 16px;
-    }
-
-    .skill-card {
-        grid-column: auto;
-        min-height: auto;
-        aspect-ratio: auto;
-        padding: 22px;
-    }
-
-    .skill-card h2 {
-        font-size: 17px;
-    }
-
-    .skill-card > p {
-        font-size: 13px;
-    }
-
-    .skill-tags {
-        gap: 7px;
-    }
-
-    .skill-tags span {
-        font-size: 11px;
-        padding: 6px 9px;
-    }
-
-    /* Projects */
-    .projects-section {
-        padding: 55px 5% 70px;
-    }
-
-    .projects-heading {
-        margin-bottom: 32px;
-    }
-
-    .projects-heading h1 {
-        font-size: 29px;
-    }
-
-    .projects-intro {
-        font-size: 13px;
-    }
-
-    .projects-container {
-        gap: 18px;
-    }
-
-    .project-card {
-        padding: 22px;
-        border-radius: 18px;
-    }
-
-    .project-details {
-        padding-left: 18px;
-    }
-
-    /* Keep Certifications and Contact
-       using their existing mobile layouts */
-}
-
